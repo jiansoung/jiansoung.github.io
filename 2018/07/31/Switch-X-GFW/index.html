@@ -17,10 +17,12 @@
 
 
 
-  <meta name="description" content="tags"/>
+  <meta name="description" content="Switch 如何翻墙"/>
 
 
 
+
+  <meta name="keywords" content="Switch, 翻墙, Jian Soung's Life" />
 
 
 
@@ -40,7 +42,7 @@
 
 
 
-<link rel="canonical" href="https://jiansoung.github.io/tags/"/>
+<link rel="canonical" href="https://jiansoung.github.io/2018/07/31/Switch-X-GFW/"/>
 
 
 
@@ -87,7 +89,7 @@
   window.config = {"title":"Jian Soung's Life","subtitle":null,"description":null,"author":"Jian Soung","language":"zh-cn","timezone":"Asia/Hong_Kong","url":"https://jiansoung.github.io","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":true,"tab_replace":null},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":"even","deploy":{"type":"git","repo":"https://github.com/jiansoung/jiansoung.github.io.git"},"ignore":[],"index_generator":{"per_page":10,"order_by":"-date","path":""},"archive_generator":{"per_page":10,"yearly":true,"monthly":true,"daily":false},"category_generator":{"per_page":10},"feed":{"type":"atom","limit":20,"hub":"","content":true,"content_limit":140,"content_limit_delim":"","path":"atom.xml"},"tag_generator":{"per_page":10},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"ip":"0.0.0.0","compress":false,"header":true},"since":2018,"favicon":"/favicon.ico","rss":"default","menu":{"Home":"/","Archives":"/archives/","Tags":"/tags","Categories":"/categories","About":"/about"},"color":"Default","toc":true,"fancybox":true,"pjax":true,"copyright":{"enable":true,"license":"<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\" target=\"_blank\">知识共享署名-非商业性使用 4.0 国际许可协议</a>"},"reward":{"enable":false,"qrCode":{"wechat":null,"alipay":null}},"social":{"email":"jian.soung@outlook.com","stack-overflow":null,"twitter":"https://twitter.com/jiansoung","facebook":null,"linkedin":null,"google":null,"github":"https://github.com/jiansoung","weibo":null,"zhihu":null,"douban":null,"pocket":null,"tumblr":null,"instagram":null},"leancloud":{"app_id":null,"app_key":null},"baidu_analytics":null,"baidu_verification":null,"google_analytics":null,"google_verification":null,"disqus_shortname":"jiansoung","changyan":{"appid":null,"appkey":null},"livere_datauid":null,"version":"2.9.0"};
 </script>
 
-    <title> 标签 - Jian Soung's Life </title>
+    <title> Switch 如何翻墙 - Jian Soung's Life </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -216,17 +218,132 @@
         <div class="content-wrapper">
           <div id="content" class="content">
             
-  <div class="tag-cloud">
-    <div class="tag-cloud-title">
-      目前共计 2 个标签
-    </div>
-    <div class="tag-cloud-tags">
-      <a href="/tags/Switch/" style="font-size: 16px;">Switch</a> <a href="/tags/翻墙/" style="font-size: 16px;">翻墙</a>
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Switch 如何翻墙
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-07-31
+        </span>
+        
+          <div class="post-category">
+            
+              <a href="/categories/网络理论与技术/">网络理论与技术</a>
+            
+          </div>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么-Switch-要翻墙"><span class="toc-text">为什么 Switch 要翻墙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Switch-翻墙所需条件"><span class="toc-text">Switch 翻墙所需条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Switch-如何翻墙"><span class="toc-text">Switch 如何翻墙</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#准备代理服务器"><span class="toc-text">准备代理服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Switch-连接-WiFi-并设置代理"><span class="toc-text">Switch 连接 WiFi 并设置代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试代理是否设置成功"><span class="toc-text">测试代理是否设置成功</span></a></li></ol></li></ol>
     </div>
   </div>
 
+
+
+    <div class="post-content">
+      
+        <p>本文利用 ShadowsocksX-NG 提供的 HTTP 代理服务器来实现 Switch 翻墙。你也可以使用类似的方法达到同样的效果。</p>
+<a id="more"></a>
+<h2 id="为什么-Switch-要翻墙"><a href="#为什么-Switch-要翻墙" class="headerlink" title="为什么 Switch 要翻墙"></a>为什么 Switch 要翻墙</h2><p>主要是为了使用 Switch 所支持的社交账号 Twitter （另一个是 Facebook），而这两者在天朝皆是技术不行且不存在的异次元网站。故而要访问两者就需要穿越异次元屏障，即翻墙。</p>
+<p><strong>注：某些在线游戏也许也在异次元世界，需要穿越才能访问。(我目前只在玩塞尔达传说，对其他游戏不清楚)</strong></p>
+<h2 id="Switch-翻墙所需条件"><a href="#Switch-翻墙所需条件" class="headerlink" title="Switch 翻墙所需条件"></a>Switch 翻墙所需条件</h2><ul>
+<li>全宇宙最强大的 Switch 一台（必然😜）</li>
+<li>WiFi</li>
+<li>能够到达异次元世界的主机，即代理服务器</li>
+<li>接着看下去 🤪</li>
+</ul>
+<p><strong>注：Switch 能支持的翻墙方式只有一种(我猜的🙄)：HTTP 代理。也就是说你的代理服务器必须支持 HTTP 代理才能够使用本文的方法翻墙。</strong></p>
+<h2 id="Switch-如何翻墙"><a href="#Switch-如何翻墙" class="headerlink" title="Switch 如何翻墙"></a>Switch 如何翻墙</h2><h3 id="准备代理服务器"><a href="#准备代理服务器" class="headerlink" title="准备代理服务器"></a>准备代理服务器</h3><blockquote>
+<p>如果你已经有一台能够到达异次元世界的 HTTP 代理服务器，可以直接跳过本小节。若你和我一样在 macOS 上使用 ShadowsocksX-NG 翻墙，那么你完全可以按照我的做法达到 Switch 翻墙的目的。若不是，方法类似。</p>
+</blockquote>
+<p>打开 ShadowsocksX-NG Preferences 窗口，选择 HTTP 标签页，填上你的局域网 IP 和端口(保持默认1087即可)，并开启 HTTP Proxy Enable 选项。然后关闭 Preferences 窗口就准备好代理服务器了。</p>
+<h3 id="Switch-连接-WiFi-并设置代理"><a href="#Switch-连接-WiFi-并设置代理" class="headerlink" title="Switch 连接 WiFi 并设置代理"></a>Switch 连接 WiFi 并设置代理</h3><p>首先，到 Switch System Settings 里选择 Internet &gt; Internet Settings 并确定(A)，连接你的 WiFi。</p>
+<p>然后，在 Internet Settings 里选择刚连接的 WiFi，并确定(A)。在出现的界面中选择 Change Settings 并确定(A)。</p>
+<p>接着，在出现的界面中选择 Proxy Settings 并确定(A)，并在出现的界面中选择 On 并确定(A)。</p>
+<p>最后，在 Proxy Settings 下面填上上一节所设置的代理服务器的 IP 地址(Server)、端口(Port)以及授权信息并保存(根据实际情况填写，我的代理服务器无授权信息就不用填了。)。</p>
+<h3 id="测试代理是否设置成功"><a href="#测试代理是否设置成功" class="headerlink" title="测试代理是否设置成功"></a>测试代理是否设置成功</h3><p>到 System Settings &gt; Internet &gt; Internet Settings 里选择 Test Connection 并确定开始测试。</p>
+<p>若测试结果显示成功则表示你的 Switch 已经可以穿越到异世界了，恭喜！</p>
+<p><strong>注：测试成功时，Global IP Address 显示的是你的真正的代理服务器的 IP 地址。(我这里显示的是 ShadowsocksX-NG 所使用的翻墙服务器的IP地址)</strong></p>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="https://jiansoung.github.io">Jian Soung</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="https://jiansoung.github.io/2018/07/31/Switch-X-GFW/">https://jiansoung.github.io/2018/07/31/Switch-X-GFW/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/Switch/">Switch</a>
+            
+              <a href="/tags/翻墙/">翻墙</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
           </div>
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
       </main>
@@ -314,9 +431,9 @@
   
   <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'https://jiansoung.github.io/tags/index.html';
-        this.page.identifier = 'tags/index.html';
-        this.page.title = 'tags';
+        this.page.url = 'https://jiansoung.github.io/2018/07/31/Switch-X-GFW/';
+        this.page.identifier = '2018/07/31/Switch-X-GFW/';
+        this.page.title = 'Switch 如何翻墙';
     };
     (function() {
     var d = document, s = d.createElement('script');

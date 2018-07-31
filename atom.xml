@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jiansoung.github.io/"/>
-  <updated>2018-07-24T03:56:42.410Z</updated>
+  <updated>2018-07-31T15:41:50.488Z</updated>
   <id>https://jiansoung.github.io/</id>
   
   <author>
@@ -17,20 +17,26 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://jiansoung.github.io/2018/07/24/hello-world/"/>
-    <id>https://jiansoung.github.io/2018/07/24/hello-world/</id>
-    <published>2018-07-24T03:56:42.410Z</published>
-    <updated>2018-07-24T03:56:42.410Z</updated>
+    <title>Switch 如何翻墙</title>
+    <link href="https://jiansoung.github.io/2018/07/31/Switch-X-GFW/"/>
+    <id>https://jiansoung.github.io/2018/07/31/Switch-X-GFW/</id>
+    <published>2018-07-31T14:15:15.000Z</published>
+    <updated>2018-07-31T15:41:50.488Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>本文利用 ShadowsocksX-NG 提供的 HTTP 代理服务器来实现 Switch 翻墙。你也可以使用类似的方法达到同样的效果。</p><a id="more"></a><h2 id="为什么-Switch-要翻墙"><a href="#为什么-Switch-要翻墙" class="headerlink" title="为什么 Switch 要翻墙"></a>为什么 Switch 要翻墙</h2><p>主要是为了使用 Switch 所支持的社交账号 Twitter （另一个是 Facebook），而这两者在天朝皆是技术不行且不存在的异次元网站。故而要访问两者就需要穿越异次元屏障，即翻墙。</p><p><strong>注：某些在线游戏也许也在异次元世界，需要穿越才能访问。(我目前只在玩塞尔达传说，对其他游戏不清楚)</strong></p><h2 id="Switch-翻墙所需条件"><a href="#Switch-翻墙所需条件" class="headerlink" title="Switch 翻墙所需条件"></a>Switch 翻墙所需条件</h2><ul><li>全宇宙最强大的 Switch 一台（必然😜）</li><li>WiFi</li><li>能够到达异次元世界的主机，即代理服务器</li><li>接着看下去 🤪</li></ul><p><strong>注：Switch 能支持的翻墙方式只有一种(我猜的🙄)：HTTP 代理。也就是说你的代理服务器必须支持 HTTP 代理才能够使用本文的方法翻墙。</strong></p><h2 id="Switch-如何翻墙"><a href="#Switch-如何翻墙" class="headerlink" title="Switch 如何翻墙"></a>Switch 如何翻墙</h2><h3 id="准备代理服务器"><a href="#准备代理服务器" class="headerlink" title="准备代理服务器"></a>准备代理服务器</h3><blockquote><p>如果你已经有一台能够到达异次元世界的 HTTP 代理服务器，可以直接跳过本小节。若你和我一样在 macOS 上使用 ShadowsocksX-NG 翻墙，那么你完全可以按照我的做法达到 Switch 翻墙的目的。若不是，方法类似。</p></blockquote><p>打开 ShadowsocksX-NG Preferences 窗口，选择 HTTP 标签页，填上你的局域网 IP 和端口(保持默认1087即可)，并开启 HTTP Proxy Enable 选项。然后关闭 Preferences 窗口就准备好代理服务器了。</p><h3 id="Switch-连接-WiFi-并设置代理"><a href="#Switch-连接-WiFi-并设置代理" class="headerlink" title="Switch 连接 WiFi 并设置代理"></a>Switch 连接 WiFi 并设置代理</h3><p>首先，到 Switch System Settings 里选择 Internet &gt; Internet Settings 并确定(A)，连接你的 WiFi。</p><p>然后，在 Internet Settings 里选择刚连接的 WiFi，并确定(A)。在出现的界面中选择 Change Settings 并确定(A)。</p><p>接着，在出现的界面中选择 Proxy Settings 并确定(A)，并在出现的界面中选择 On 并确定(A)。</p><p>最后，在 Proxy Settings 下面填上上一节所设置的代理服务器的 IP 地址(Server)、端口(Port)以及授权信息并保存(根据实际情况填写，我的代理服务器无授权信息就不用填了。)。</p><h3 id="测试代理是否设置成功"><a href="#测试代理是否设置成功" class="headerlink" title="测试代理是否设置成功"></a>测试代理是否设置成功</h3><p>到 System Settings &gt; Internet &gt; Internet Settings 里选择 Test Connection 并确定开始测试。</p><p>若测试结果显示成功则表示你的 Switch 已经可以穿越到异世界了，恭喜！</p><p><strong>注：测试成功时，Global IP Address 显示的是你的真正的代理服务器的 IP 地址。(我这里显示的是 ShadowsocksX-NG 所使用的翻墙服务器的IP地址)</strong></p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+      &lt;p&gt;本文利用 ShadowsocksX-NG 提供的 HTTP 代理服务器来实现 Switch 翻墙。你也可以使用类似的方法达到同样的效果。&lt;/p&gt;
     
     </summary>
     
+      <category term="网络理论与技术" scheme="https://jiansoung.github.io/categories/%E7%BD%91%E7%BB%9C%E7%90%86%E8%AE%BA%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Switch" scheme="https://jiansoung.github.io/tags/Switch/"/>
+    
+      <category term="翻墙" scheme="https://jiansoung.github.io/tags/%E7%BF%BB%E5%A2%99/"/>
     
   </entry>
   
